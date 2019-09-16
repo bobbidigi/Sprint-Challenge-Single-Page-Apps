@@ -1,7 +1,8 @@
 import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import { Tab } from "semantic-ui-react";
+// import { NavLink } from "react-router-dom";
 import CharacterList from "./CharacterList";
+import LocationsList from './LocationsList';
 
 // TODO: Add missing menu/tabs/nav below
 
@@ -13,10 +14,10 @@ import CharacterList from "./CharacterList";
 
 
 const panes = [
-        { menuItem: "home", pane: <CharacterList/>},
-        { menuItem: 'characters', pane: 'Tab 2 Content' },
-        { menuItem: 'locations', pane: 'Tab 3 Content' },
-        { menuItem: 'episodes', pane: 'Tab 4 Content' },
+        { menuItem: "home", pane: 'home' },
+        { menuItem: 'characters', pane: <CharacterList /> },
+        { menuItem: 'locations', pane: <LocationsList /> },
+        { menuItem: 'episodes', pane: 'episodes' },
       ]
 
 const TabNav = () => <Tab panes={panes} renderActiveOnly={false} />

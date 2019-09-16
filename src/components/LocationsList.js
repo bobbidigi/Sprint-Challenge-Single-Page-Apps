@@ -4,7 +4,7 @@ import LocationCard from './LocationCard';
 
 export default function LocationsList() {
 
-    const [characterLocation, setCharacterLocation] = useState([{}]) 
+    const [characterLocation, setCharacterLocation] = useState([]) 
   useEffect(() => {
     // Make a request for a user with a given ID
   axios.get('https://rickandmortyapi.com/api/location/')
@@ -23,9 +23,7 @@ export default function LocationsList() {
     <section className="character-list grid-view">
 
       {characterLocation.map((location, index) => (
-          <>
-             <LocationCard location={location} index={index}/>
-          </>
+          <LocationCard location={location} key={index}/>
       ))}
 
     </section>

@@ -26,7 +26,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ X] Explain benefit(s) using `client-side routing`?
 
-> Answer: Less data is processed, routing between views is generally faster.
+> Answer: All of the data is loaded all at once initially which alows for,   Less data is processed, routing between views is generally faster.
           Smooth transitions and animations between views are easier to implement.
 
 - [X ] What does AJAX stand for?

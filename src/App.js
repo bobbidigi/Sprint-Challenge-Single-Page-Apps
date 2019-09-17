@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom';
 import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from "./components/CharacterList.js";
 import LocationsList from "./components/LocationsList.js";
+import Episodes from "./components/Episodes"
 // import SearchForm from "./components/SearchForm";
 
 export default function App() {
@@ -13,12 +14,11 @@ export default function App() {
     
     <main>
       <Header />
-      <TabNav />
-     
-      <Route exact path='/' component={WelcomePage}/>
-      <Route path='/characters' component={CharacterList}/>
+      <TabNav />     
+      <Route exact path='/' render={(props) => <WelcomePage {...props} />}/>
+      <Route path='/characters' render={(props) => <CharacterList {...props}/>}/>
       <Route path='/locations' component={LocationsList}/>
-      {/* <Route path='search' component={SearchForm}/> */}
+      <Route path='/episodes' component={Episodes}/>
     </main>
   );
 }

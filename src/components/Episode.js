@@ -4,16 +4,16 @@ import {
   CardTitle
 } from 'reactstrap';
 
-export default function LocationCard(props) {
+export default function Episode(props) {
   // const { name, type, dimension, residents } = props;
-  // console.log(props)
+  console.log(props)
   return (
 
         <Card>
           <CardBody>
-            <CardTitle>{props.location.name}</CardTitle>
-            <CardText>{props.location.type}</CardText>
-            <CardText>{props.location.dimension}</CardText>
+            <CardTitle>{props.episode.episode}</CardTitle>
+            <CardText>{props.episode.name}</CardText>
+            <CardText>{props.episode.air_date}</CardText>
             {/* <CardText>{props.location.residents}</CardText> */}
           </CardBody>
         </Card>
